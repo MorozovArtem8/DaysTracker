@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DaysTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gj9-tk-OtL">
+                                <rect key="frame" x="174" y="134" width="66" height="35"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="SoN-cv-dSi">
+                                <rect key="frame" x="47" y="253" width="320" height="216"/>
+                                <connections>
+                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="PsP-A9-ftc"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeY-km-lVc">
+                                <rect key="frame" x="147" y="494" width="120" height="50"/>
+                                <color key="backgroundColor" red="0.65680819749832153" green="0.49444115161895752" blue="0.90902739763259888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="321-q3-xb3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Z9o-U9-4Me"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Результат">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resultButtonTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wju-5j-wcG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Уже целых ... дней" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dan-98-QBx">
+                                <rect key="frame" x="110" y="569" width="194" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбери дату начала" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ao-X3-Duw">
+                                <rect key="frame" x="113" y="199" width="188" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.8558616042137146" green="0.65071731805801392" blue="0.92462986707687378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aeY-km-lVc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7gc-K2-Ysz"/>
+                            <constraint firstItem="Dan-98-QBx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="HEQ-Gm-n6g"/>
+                            <constraint firstItem="aeY-km-lVc" firstAttribute="top" secondItem="SoN-cv-dSi" secondAttribute="bottom" constant="25" id="JAh-7y-uVL"/>
+                            <constraint firstItem="gj9-tk-OtL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nld-Cp-oud"/>
+                            <constraint firstItem="Dan-98-QBx" firstAttribute="top" secondItem="aeY-km-lVc" secondAttribute="bottom" constant="25" id="WFA-g4-yf2"/>
+                            <constraint firstItem="1ao-X3-Duw" firstAttribute="top" secondItem="gj9-tk-OtL" secondAttribute="bottom" constant="30" id="YAP-eX-i4V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dan-98-QBx" secondAttribute="trailing" constant="110" id="YaY-4z-MP2"/>
+                            <constraint firstItem="1ao-X3-Duw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YrU-kT-Ydc"/>
+                            <constraint firstItem="SoN-cv-dSi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a90-Hn-wet"/>
+                            <constraint firstItem="gj9-tk-OtL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="kRm-Rd-EfG"/>
+                            <constraint firstItem="SoN-cv-dSi" firstAttribute="top" secondItem="1ao-X3-Duw" secondAttribute="bottom" constant="30" id="ro2-jx-Sy7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="Dan-98-QBx" id="CPa-I8-hZz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+</document>
